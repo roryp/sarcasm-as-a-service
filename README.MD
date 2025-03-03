@@ -13,7 +13,7 @@ This project is a simple web application that detects sarcasm in a given text us
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/sarcasm-as-a-service.git
+    git clone https://github.com/roryp/sarcasm-as-a-service.git
     cd sarcasm-as-a-service
     ```
 

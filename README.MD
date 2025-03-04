@@ -1,6 +1,6 @@
 # Sarcasm Detector
 
-This project is a simple web application that detects sarcasm in a given text using OpenAI's GPT-4.5-preview model. The application provides a frontend where users can input text or use their webcam to analyze facial expressions for sarcasm detection.
+This project is a simple web application that detects sarcasm in a given text using OpenAI's GPT-4.5-preview model. The application provides a frontend where users can input text, use their webcam to analyze facial expressions, or record audio for sarcasm detection.
 
 ## Prerequisites
 
@@ -8,6 +8,7 @@ This project is a simple web application that detects sarcasm in a given text us
 - npm (v6 or higher)
 - OpenAI API key
 - Web browser with webcam access permissions
+- Microphone access for audio analysis features
 
 ## Installation
 
@@ -43,18 +44,28 @@ This project is a simple web application that detects sarcasm in a given text us
 - Click "Detect Sarcasm" to analyze the text
 - Review the analysis results below
 
-### NEW: Webcam-based Sarcasm Detection
+### Webcam-based Sarcasm Detection
 - Switch to the "Webcam Analysis" tab
 - Click "Start Camera" to enable your webcam
 - Click "Take Snapshot" to capture your facial expression
 - Click "Analyze Expression" to detect sarcasm in your facial expression
 - Review the analysis results below
 
+### NEW: Audio-based Sarcasm Detection
+- Switch to the "Audio Analysis" tab
+- Click "Start Recording" to enable your microphone
+- Speak your message with or without sarcasm
+- Click "Stop Recording" when finished
+- Review and play back your recording
+- Click "Analyze Voice" to detect sarcasm in your voice recording
+- Review the transcription and analysis results below
+
 ## Endpoints
 
 - `GET /`: Serves the static HTML frontend.
 - `POST /detect-sarcasm`: Analyzes the provided text for sarcasm.
 - `POST /detect-facial-sarcasm`: Analyzes a facial expression image for signs of sarcasm.
+- `POST /detect-voice-sarcasm`: Transcribes audio and analyzes it for signs of sarcasm.
 - `GET /sarcasm`: Provides a sarcastic comment explaining sarcasm.
 
 ## Example Usage
@@ -75,11 +86,23 @@ This project is a simple web application that detects sarcasm in a given text us
 6. Review the snapshot and click "Analyze Expression" to detect sarcasm.
 7. The analysis result will be displayed below.
 
+### Audio Analysis
+1. Open the application in your browser.
+2. Click on the "Audio Analysis" tab.
+3. Click the "Start Recording" button to activate your microphone (you may need to grant permission).
+4. Speak your message with the desired tone (sarcastic or not).
+5. Click the "Stop Recording" button when finished.
+6. You can play back your recording to verify the audio quality.
+7. Click the "Analyze Voice" button to process your recording.
+8. The system will transcribe your speech and provide an analysis of sarcasm detection.
+9. Both the transcription and analysis will be displayed below.
+
 ## Note
-For the webcam feature to work properly, you'll need to:
+For the webcam and audio features to work properly, you'll need to:
 - Use a browser that supports the MediaDevices API
-- Grant the website permission to access your camera
+- Grant the website permission to access your camera and microphone
 - Have adequate lighting for clear facial expression capture
+- Ensure your microphone is functioning properly and speak clearly for accurate transcription
 
 ## License
 
